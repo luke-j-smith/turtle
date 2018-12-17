@@ -4,21 +4,28 @@ Turtle Graphics was the fourth and final assignment (completed in January 2016) 
 ### Turtle's Grammar
 ```
 <MAIN>        ::= "{" <INSTRCTLST>
-<INSTRCTLST>  ::= <INSTRUCTION><INSTRCTLST> | "}"
-<INSTRUCTION> ::= <FD> | 
+<INSTRCTLST>  ::= <INSTRUCTION><INSTRCTLST> | 
+                  "}"
+<INSTRUCTION> ::= <FD> |
                   <LT> |
                   <RT> |
                   <DO> |
-                  <SET> 
+                  <SET>
 <FD>          ::= "FD" <VARNUM>
 <LT>          ::= "LT" <VARNUM>
 <RT>          ::= "RT" <VARNUM>
 <DO>          ::= "DO" <VAR> "FROM" <VARNUM> "TO" <VARNUM> "{" <INSTRCTLST>
 <VAR>         ::= [A−Z]
-<VARNUM>      ::= number | <VAR>
+<VARNUM>      ::= number | 
+                  <VAR>
 <SET>         ::= "SET" <VAR> ":=" <POLISH>
-<POLISH>      ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";" 
-<OP>          ::= "+" | "−" | "*" | "/"
+<POLISH>      ::= <OP> <POLISH> | 
+                  <VARNUM> <POLISH> | 
+                  ";"
+<OP>          ::= "+" | 
+                  "−" | 
+                  "*" | 
+                  "/"
 ```
 
 ## Assignment
@@ -41,6 +48,9 @@ Extension of the formal grammar to allow the use of functions in a Turtle progra
 
 ##### Real-time Entry
 Real-time entry of a Turtle program via the command line.
+
+## Where to Look
+The most interesting parts of the assignment are probably contained within the extension. However, as each part built nicely on the work that came before it, I personally find it interesting to see how the code has progressed over time, so I have included each part of the assignment in its entirety and original form.
 
 ## Disclaimer
 I have have confirmed with the University that I am able to publish my solution to this assignment. However, as there is the possibility that a similar assignment may still be used by the University, I have been informed that I should state that *this work cannot be used without my permission* and if it is submitted by as current student as their own, they will be investigated for plagiarism.

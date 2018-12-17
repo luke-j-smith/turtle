@@ -7,7 +7,8 @@ There are two files ```neillsdl2.c``` and ```neillsdl2.h``` that I have not writ
 #### Turtle Grammar
 ```
 <MAIN>        ::= "{" <INSTRCTLST>
-<INSTRCTLST>  ::= <INSTRUCTION><INSTRCTLST> | "}"
+<INSTRCTLST>  ::= <INSTRUCTION><INSTRCTLST> |
+                  "}"
 <INSTRUCTION> ::= <FD> |
                   <LT> |
                   <RT> |
@@ -18,10 +19,16 @@ There are two files ```neillsdl2.c``` and ```neillsdl2.h``` that I have not writ
 <RT>          ::= "RT" <VARNUM>
 <DO>          ::= "DO" <VAR> "FROM" <VARNUM> "TO" <VARNUM> "{" <INSTRCTLST>
 <VAR>         ::= [A−Z]
-<VARNUM>      ::= number | <VAR>
+<VARNUM>      ::= number | 
+                  <VAR>
 <SET>         ::= "SET" <VAR> ":=" <POLISH>
-<POLISH>      ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";"
-<OP>          ::= "+" | "−" | "*" | "/"
+<POLISH>      ::= <OP> <POLISH> |
+                  <VARNUM> <POLISH> |
+                  ";" 
+<OP>          ::= "+" |
+                  "−" |
+                  "*" |
+                  "/"
 ```
 
 ## Usage
@@ -30,7 +37,7 @@ The parser can be complied using the *makefile*:
 make
 ```
 
-The parser can then be ran using the *makefile* and by specifying the input file:
+The interpreter can then be run using the *makefile* and by specifying the input file:
 ```
 make run TURTLE="input_file_name.txt"
 ```

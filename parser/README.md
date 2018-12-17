@@ -4,7 +4,8 @@ The parser takes a text file as its input and determines whether that file conta
 #### Turtle Grammar
 ```
 <MAIN>        ::= "{" <INSTRCTLST>
-<INSTRCTLST>  ::= <INSTRUCTION><INSTRCTLST> | "}"
+<INSTRCTLST>  ::= <INSTRUCTION><INSTRCTLST> |
+                  "}"
 <INSTRUCTION> ::= <FD> |
                   <LT> |
                   <RT> |
@@ -15,10 +16,16 @@ The parser takes a text file as its input and determines whether that file conta
 <RT>          ::= "RT" <VARNUM>
 <DO>          ::= "DO" <VAR> "FROM" <VARNUM> "TO" <VARNUM> "{" <INSTRCTLST>
 <VAR>         ::= [A−Z]
-<VARNUM>      ::= number | <VAR>
+<VARNUM>      ::= number | 
+                  <VAR>
 <SET>         ::= "SET" <VAR> ":=" <POLISH>
-<POLISH>      ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";"
-<OP>          ::= "+" | "−" | "*" | "/"
+<POLISH>      ::= <OP> <POLISH> |
+                  <VARNUM> <POLISH> |
+                  ";" 
+<OP>          ::= "+" |
+                  "−" |
+                  "*" |
+                  "/"
 ```
 
 ## Usage
@@ -27,7 +34,7 @@ The parser can be complied using the *makefile*:
 make
 ```
 
-The parser can then be ran using the *makefile* and by specifying the input file:
+The parser can then be run using the *makefile* and by specifying the input file:
 ```
 make run TURTLE="input_file_name.txt"
 ```
