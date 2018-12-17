@@ -1,0 +1,2 @@
+This is the test file for checking the open_file() and close_file() functions. 
+

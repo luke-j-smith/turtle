@@ -1,0 +1,21 @@
+valgrind ./turtle interp_error_23.txt
+==6196== Memcheck, a memory error detector
+==6196== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6196== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6196== Command: ./turtle interp_error_23.txt
+==6196== 
+
+Interpreter Error: 23 - The Turtle will be going off the left of the screen!
+Please increase the x value.
+Error occurred at string: 5.
+
+==6196== 
+==6196== HEAP SUMMARY:
+==6196==     in use at exit: 0 bytes in 0 blocks
+==6196==   total heap usage: 12 allocs, 12 frees, 5,018 bytes allocated
+==6196== 
+==6196== All heap blocks were freed -- no leaks are possible
+==6196== 
+==6196== For counts of detected and suppressed errors, rerun with: -v
+==6196== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+

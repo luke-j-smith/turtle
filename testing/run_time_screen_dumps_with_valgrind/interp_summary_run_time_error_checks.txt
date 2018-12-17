@@ -1,0 +1,32 @@
+	SUMMARY OF RUN TIME ERROR TESTS FOR INTERPRETER
+
+DESCRIPTION		ERROR TYPE	ERROR CODE	IS FLAGGED?			
+
+agrc != 2		Code		1		Yes	
+No input file		Code		3		Yes
+Empty input 		Parsing 	1		Yes
+No start symbol		Parsing 	2		Yes
+No term. char.		Parsing 	3		Yes
+No instruction		Parsing 	4		Yes
+No DO start 		Parsing		5		Yes (by 4)
+No DO variable		Parsing 	6		Yes
+No DO "FROM"		Parsing 	7		Yes
+No DO num. from		Parsing		8		Yes
+No DO num. to		Parsing 	8		Yes
+No DO "TO"		Parsing		9		Yes
+No "{" after DO		Parsing 	10		Yes
+No instruction 		Parsing 	11		Yes
+No SET var.		Parsing 	12		Yes
+No SET ":="		Parsing 	13		Yes
+Invalid polish		Parsing		14		Yes		
+No move amount		Parsing 	15		Yes
+DO not integer		Interpreter     16		Yes
+Variable not set	Interpreter     17		Yes
+DO FROM > DO TO		Interpreter     18		Yes
+Dividing by zero	Interpreter     19		Yes
+Too many ops.		Interpreter     20		Yes
+Too few ops.		Interpreter     21		Yes
+Off right of SDL	Interpreter     22		Yes
+Off left of SDL		Interpreter     23		Yes
+Off bottom of SDL	Interpreter     24		Yes
+Off top of SDL		Interpreter     25		Yes

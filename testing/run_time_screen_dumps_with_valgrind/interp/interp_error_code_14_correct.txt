@@ -1,0 +1,20 @@
+valgrind ./turtle interp_error_14.txt
+==6027== Memcheck, a memory error detector
+==6027== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6027== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6027== Command: ./turtle interp_error_14.txt
+==6027== 
+
+Parsing Error: 14 - Expecting a Reverse Polish expression.
+ Either: (i) an operation; (ii) a variable; or (iii) the terminating character (ie, ';') is expected.
+ Error occurred at string: 7.
+
+==6027== 
+==6027== HEAP SUMMARY:
+==6027==     in use at exit: 0 bytes in 0 blocks
+==6027==   total heap usage: 16 allocs, 16 frees, 5,073 bytes allocated
+==6027== 
+==6027== All heap blocks were freed -- no leaks are possible
+==6027== 
+==6027== For counts of detected and suppressed errors, rerun with: -v
+==6027== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

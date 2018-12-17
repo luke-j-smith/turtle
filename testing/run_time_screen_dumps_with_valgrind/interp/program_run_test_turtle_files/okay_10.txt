@@ -1,0 +1,9 @@
+{
+  SET G := 300 3 / ; 
+  FD G
+  RT 180
+  SET I := 2 G * ; 
+  FD I
+  LT 90
+  FD G
+}

@@ -1,0 +1,20 @@
+valgrind ./turtle parser_error_8_v2.txt
+==2902== Memcheck, a memory error detector
+==2902== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==2902== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==2902== Command: ./turtle parser_error_8_v2.txt
+==2902== 
+
+Parsing Error: 8 - Expecting a variable [A-Z] or an integer to be one of the subjects of a DO expression - need variable or number to DO from or to.
+Error occurred at string: 8.
+
+==2902== 
+==2902== HEAP SUMMARY:
+==2902==     in use at exit: 0 bytes in 0 blocks
+==2902==   total heap usage: 12 allocs, 12 frees, 4,751 bytes allocated
+==2902== 
+==2902== All heap blocks were freed -- no leaks are possible
+==2902== 
+==2902== For counts of detected and suppressed errors, rerun with: -v
+==2902== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+

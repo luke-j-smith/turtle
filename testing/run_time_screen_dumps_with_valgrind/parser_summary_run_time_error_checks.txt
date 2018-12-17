@@ -1,0 +1,26 @@
+			SUMMARY OF RUN TIME ERROR TESTS FOR PARSER
+
+DESCRIPTION		ERROR TYPE	ERROR CODE	IS FLAGGED?			
+
+agrc != 2		Code		1		Yes	
+No input file		Code		3		Yes
+Empty input 		Parsing 	1		Yes
+No start symbol		Parsing 	2		Yes
+No term. char.		Parsing 	3		Yes
+No instruction		Parsing 	4		Yes
+No DO start 		Parsing		5		Yes (by 4)
+No DO variable		Parsing 	6		Yes
+No DO "FROM"		Parsing 	7		Yes
+No DO num. from		Parsing		8		Yes
+No DO num. to		Parsing 	8		Yes
+No DO "TO"		Parsing		9		Yes
+No "{" after DO		Parsing 	10		Yes
+No instruction 		Parsing 	11		Yes
+No SET var.		Parsing 	12		Yes
+No SET ":="		Parsing 	13		Yes
+Invalid polish		Parsing		14		Yes		
+No move amount		Parsing 	15		Yes
+
+
+
+								

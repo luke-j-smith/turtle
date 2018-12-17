@@ -1,0 +1,20 @@
+valgrind ./turtle 
+==6275== Memcheck, a memory error detector
+==6275== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6275== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6275== Command: ./turtle
+==6275== 
+
+ERROR: 1 - Expecting two arguments on command line.
+Precisely, an executable followed by file (containing a Turtle program) is required.
+
+==6275== 
+==6275== HEAP SUMMARY:
+==6275==     in use at exit: 0 bytes in 0 blocks
+==6275==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==6275== 
+==6275== All heap blocks were freed -- no leaks are possible
+==6275== 
+==6275== For counts of detected and suppressed errors, rerun with: -v
+==6275== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+

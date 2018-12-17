@@ -1,0 +1,473 @@
+valgrind ./test_turtle interp_error_24.txt
+==5375== Memcheck, a memory error detector
+==5375== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5375== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5375== Command: ./test_turtle interp_error_24.txt
+==5375== 
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: 1 - #define str_same (turtle_interp.h)
+  Test: the return value when strings are not the same (ie, should be False). ...passed
+  Test: the return value when strings are the same (ie, should be True). ...passed
+Suite: 2 - is_op (turtle_interp.c)
+  Test: test False returned when operation is too long (ie, when length > 1). ...passed
+  Test: test False returned when operation is incorrect - v1. ...passed
+  Test: test False returned when operation is incorrect - v2. ...passed
+  Test: test False returned when operation is incorrect - v3. ...passed
+  Test: test False returned when operation is incorrect - v4. ...passed
+  Test: test False returned when operation is incorrect - v5. ...passed
+  Test: test True returned for all possible (ie, defined by grammar) operations. ...passed
+Suite: 3 - a_variable_name  (turtle_interp.h)
+  Test: test zero returned when operation is incorrect - v1. ...passed
+  Test: test zero returned when operation is incorrect - v2. ...passed
+  Test: test zero returned when operation is incorrect - v3. ...passed
+  Test: test zero returned when operation is incorrect - v4. ...passed
+  Test: test zero returned when operation is incorrect - v5. ...passed
+  Test: test one returned for all correct (ie, set by grammar) names. ...passed
+Suite: 4 - is_var (turtle_interp.c)
+  Test: test false returned when operation is too long (ie, when length > 1). ...passed
+  Test: test False returned when variable name is incorrect - v1. ...passed
+  Test: test False returned when variable name is incorrect - v2. ...passed
+  Test: test False returned when variable name is incorrect - v3. ...passed
+  Test: test False returned when variable name is incorrect - v4. ...passed
+  Test: test False returned when variable name is incorrect - v5. ...passed
+  Test: test true returned for all possible and correct variable names. ...passed
+Suite: 5 - is_negative (turtle_interp.h)
+  Test: test False returned when variable name is incorrect - v1. ...passed
+  Test: test False returned when variable name is incorrect - v2. ...passed
+  Test: test False returned when variable name is incorrect - v3. ...passed
+  Test: test False returned when variable name is incorrect - v4. ...passed
+  Test: test False returned when variable name is incorrect - v5. ...passed
+  Test: test true returned for all possible and correct variable names. ...passed
+Suite: 6 - #define more_than_one_decimal_or_negative (turtle_interp.h)
+  Test: test True returned for invalid combination - v1. ...passed
+  Test: test True returned for invalid combination - v2. ...passed
+  Test: test True returned for invalid combination - v3. ...passed
+  Test: test True returned for invalid combination - v4. ...passed
+  Test: test True returned for invalid combination - v5. ...passed
+  Test: test False returned for valid combination - type 1. ...passed
+  Test: test False returned for valid combination - type 2. ...passed
+  Test: test False returned for valid combination - type 3. ...passed
+  Test: test False returned for valid combination - type 4. ...passed
+Suite: 7 - #define determine_type_two_inputs (turtle_interp.h)
+  Test: the that zero is returned when both input are zero. ...passed
+  Test: the return value for a range of inputs - negative to positive. ...passed
+Suite: 8 - type_of_number (turtle_interp.c)
+  Test: test False returned input does not relate to a valid combination - v1. ...passed
+  Test: test False returned input does not relate to a valid combination - v2. ...passed
+  Test: test False returned input does not relate to a valid combination - v3. ...passed
+  Test: test False returned input does not relate to a valid combination - v4. ...passed
+  Test: test False returned input does not relate to a valid combination - v5. ...passed
+  Test: test NonNegInt returned when string is a non-negative integer. ...passed
+  Test: test NegInt returned value when string is a negative integer. ...passed
+  Test: test NonNegFloat returned value when string non-negative decimal. ...passed
+  Test: test NegFloat returned when string is a negative floating point. ...passed
+Suite: 9 - is_num (turtle_interp.c)
+  Test: test False returned when string is not a number - v1. ...passed
+  Test: test False returned when string is not a number - v2. ...passed
+  Test: test False returned when string is not a number - v3. ...passed
+  Test: test False returned when string is not a number - v4. ...passed
+  Test: test False returned when string is not a number - v5. ...passed
+  Test: test Number returned when string is a number an integer. ...passed
+  Test: test Number returned value when string is a negative integer. ...passed
+  Test: test Number returned value when string non-negative decimal. ...passed
+  Test: test Number returned when string is a negative floating point - v1. ...passed
+  Test: test Number returned when string is a negative floating point - v2. ...passed
+Suite: 10 - is_var_or_num (turtle_interp.c)
+  Test: test False returned when string is not a number (1). ...passed
+  Test: test False returned when string is not a number (2). ...passed
+  Test: test False returned when string is not a number (3). ...passed
+  Test: test False returned when string is not a number (4). ...passed
+  Test: test False returned when number is negative. ...passed
+  Test: test False returned when string is not a variable (1). ...passed
+  Test: test False returned when string is not a variable (2). ...passed
+  Test: test False returned when string is not a variable (3). ...passed
+  Test: test False returned when string is not a variable (4). ...passed
+  Test: test Number returned for a non-negative integer. ...passed
+  Test: test Number returned for a negative integer. ...passed
+  Test: test Number returned for a non-negative floating point. ...passed
+  Test: test Number returned for a negative floating point - v1. ...passed
+  Test: test Number returned for a negative floating point - v2. ...passed
+  Test: test Variable returned for all possible variable names. ...passed
+Suite: 11 - is_pointer_null (turtle_interp_setup.c)
+  Test: for pointers of type: void. ...passed
+  Test: for pointers of type: int. ...passed
+  Test: for pointers of type: unsigned int. ...passed
+  Test: for pointers of type: char. ...passed
+  Test: for pointers of type: char *. ...passed
+  Test: for pointers of type: Prog. ...passed
+Suite: 12 - memory_for_Prog (turtle_interp_setup.c)
+  Test: that returned pointer is not null. ...passed
+  Test: returned pointer has correct size. ...passed
+Suite: 13 - memory_for_string (turtle_interp_setup.c)
+  Test: that returned pointer is not null. ...passed
+  Test: returned pointer has correct size. ...passed
+  Test: that calloc worked correctly. ...passed
+  Test: that pointer of correct type (can store string). ...passed
+Suite: 14 - memory_for_program (turtle_interp_setup.c)
+  Test: that returned pointer is not null. ...passed
+  Test: returned pointer has correct size. ...passed
+  Test: that calloc worked correctly. ...passed
+  Test: that variable can store correct amount of strings). ...passed
+Suite: 15 - open_file (turtle_interp_setup.c)
+  Test: that function flags when null pointer returned. ...passed
+  Test: that function returns correct value when file successfully opened. ...passed
+  Test: that function returns a non-null pointer when file successfully opened. ...passed
+  Test: that file is readable and behaves appropriately. ...passed
+  Test: that file is not writable. ...passed
+Suite: 16 - close_file (turtle_interp_setup.c)
+  Test: that function returns correct value when file successfully closed. ...passed
+  Test: that file is actually closed (when function doesn't that it isn't). ...passed
+Suite: 17 - string_length_too_long (turtle_interp_setup.c)
+  Test: that function returns False when string within bounds. ...passed
+  Test: that function returns True when string out of bounds. ...passed
+Suite: 18 - number_of_strings_in_file (turtle_interp_setup.c)
+  Test: that function returns zero for an empty file. ...passed
+  Test: correct amount returned for for non-empty file. ...passed
+Suite: 19 - initialise_turtle_position(turtle_interp_setup.c)
+  Test: that the function sets the correct value for TurtlePos turtle.current.x. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.current.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.previous.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.previous.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.theta. ...passed
+Suite: 20 - initialise_Prog(turtle_interp_setup.c)
+  Test: that function does not return null char ** pointerand p->totalStrs is not changed. ...passed
+  Test: that function sets p->place to correct starting value and p->totalStrs is not changed. ...passed
+  Test: that function sets the initial temporary value (for calcs) to 0. ...passed
+  Test: that function sets all initial var pointers to null. ...passed
+  Test: that function sets currentMove to NO_MOVE (-1). ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.current.x. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.current.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.previous.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.previous.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.theta. ...passed
+Suite: 21 - read_in_strings (turtle_interp_setup.c)
+  Test: that function returns zero for an empty file. ...passed
+  Test: correct amount returned for for non-empty file. ...passed
+  Test: that function read in strings correctly. ...passed
+Suite: 22 - initialise_stack (turtle_interp_setup.c)
+  Test: that function returns a stack pointer that is not null. ...passed
+  Test: that function returns a stack pointer that is the correct and expected size ...passed
+  Test: that function sets the stack stack size (ie, s.size) to correct starting value. ...passed
+  Test: that function returns a stack top value of zero. ...passed
+Suite: 23 - free_stack (turtle_interp_setup.c)
+  Test: that function frees the memory allocated for the stack and returns NULL pointer. ...passed
+Suite: 24 - free_program_memory(turtle_interp_setup.c)
+  Test: that function correctlyfree any allocated memory in Prog ptr and sets all ptrsto null. ...passed
+Suite: 25 - set_up_program(turtle_interp_setup.c)
+  Test: that function does not return null Prog * pointer. ...passed
+  Test: that function does not return null char ** pointer. ...passed
+  Test: that function determines the num. of strings in file. ...passed
+  Test: that function does not return null char * pointers. ...passed
+  Test: that function correctly copies in strings from file. ...passed
+  Test: that function correctly set place in file (0). ...passed
+  Test: that function sets the initial temporary value (for calcs) to 0. ...passed
+  Test: that function sets all initial var pointers to null. ...passed
+  Test: that function sets currentMove to NO_MOVE (-1). ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.current.x. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.current.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.previous.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.previous.y. ...passed
+  Test: that the function sets the correct value for TurtlePos turtle.theta. ...passed
+  Test: that the function shuts the file and the file pointer to null. ...passed
+Suite: 26 - within_expression_and_file (turtle_interp_setup.c)
+  Test: that False is returnedwhen place in file is beyond the total file length. ...passed
+  Test: that False is returnedwhen current character is terminating char (";"). ...passed
+  Test: that True returned when within file length and current character is not ";" char. ...passed
+Suite: 27 - estimate_polish_length (turtle_interp_setup.c)
+  Test: that function returns the correct expression length for an empty file. ...passed
+  Test: that function returns the correct expression length for an polish expression - v1. ...passed
+  Test: that function returns the correct expression length for an polish expression - v2. ...passed
+  Test: that function returns the correct expression length for an polish expression - v3. ...passed
+  Test: that function returns the correct expression length for an polish expression - v4. ...passed
+  Test: that function returns the correct expression length for an polish expression - v5. ...passed
+Suite: 28 - is_move (turtle_interp.c)
+  Test: that returns correct values when not a valid move v1 ...passed
+  Test: that returns correct values when not a valid move v2 ...passed
+  Test: that returns correct values when not a valid move v3 ...passed
+  Test: that returns True for thevalid move of FD. ...passed
+  Test: that returns True for thevalid move of LT. ...passed
+  Test: that returns True for thevalid move of RT. ...passed
+Suite: 29 - #define MOCK_INTERP_ERROR (turtle_errors.h)
+  Test: that function correctly exits is parsing error and leaves no alloced memory ...
+Parsing Error: 0 - Test to see if the #define PARSING_ERROR exit function behaves correctly.
+NO ACTUAL ERROR - Print one: 1.
+
+passed
+Suite: 30 - mock_check_within_bounds(turtle_interp.c)
+  Test: that function flags in place counter = number strings. ...passed
+  Test: that function flags in place counter > number strings. ...passed
+  Test: that return value when place counter < number strings. ...passed
+Suite: 31 - mock_push (turtle_interp_setup.c)
+  Test: that function flags when pushing onto a full stack. ...passed
+  Test: that function correctly updates stack top value. ...passed
+  Test: that function correctly stores/pushes the inputed value. ...passed
+Suite: 32 - mock_pop (turtle_interp.c)
+  Test: that function flags when popping off an empty stack. ...passed
+  Test: that function correctly updates stack top value. ...passed
+  Test: that function correctly pops/loads the correct stack value. ...passed
+Suite: 33 - mock_get_final_value_from_stack (turtle_interp.c)
+  Test: that function flags when stack has more than one element in it. ...passed
+  Test: that function flags when stack has less than one element in it. ...passed
+  Test: that function correctly pops/loads the correct stack value when one element. ...passed
+Suite: 34 - mock_read_number_value (turtle_interp.c)
+  Test: test False returned when string is not a number and str unchanged - v1. ...passed
+  Test: test False returned when string is not a number and str unchanged - v2. ...passed
+  Test: test False returned when string is not a number and str unchanged - v3. ...passed
+  Test: test False returned when string is not a number and str unchanged - v4. ...passed
+  Test: test False returned when string is not a number and str unchanged - v5. ...passed
+  Test: test correct value returned when string is a non-neg. integer and str is unchanged. ...passed
+  Test: test correct value returned when string is a negative integer and str is unchanged. ...passed
+  Test: test correct value returned when string non-neg. float and str is unchanged. ...passed
+  Test: test correct value returned when string is a neg. float and str is same  - v1. ...passed
+  Test: test correct value returned when string is a neg. float and str is same  - v2. ...passed
+Suite: 35 - #define determine_var_index (turtle_interp.c)
+  Test: that returns correct index for each possible variable name. ...passed
+Suite: 36 - mock_set_var_value (turtle_interp.c)
+  Test: that function flags when variable name is too long. ...passed
+  Test: that function flags when variable name is incorrect. ...passed
+  Test: that function sets correct value when not set before. ...passed
+  Test: that function sets correct value when set before. ...passed
+Suite: 37 - mock_read_var_value (turtle_interp.c)
+  Test: that function flags when variable name is too long. ...passed
+  Test: that function flags when variable name is incorrect. ...passed
+  Test: that function flags when variable has not been set. ...passed
+  Test: that returns correct value for each variable. ...passed
+Suite: 38 - mock_value_of_var_or_num (turtle_interp.c)
+  Test: test False returned when string is not a variable or number - v1. ...passed
+  Test: test False returned when string is not a variable or number - v2. ...passed
+  Test: test False returned when string is not a variable or number - v3. ...passed
+  Test: test False returned when string is not a variable or number - v4. ...passed
+  Test: test False returned when string is not a variable or number - v5. ...passed
+  Test: test correct value is returned for predefined variable, for each possible name. ...passed
+  Test: test correct returned when string is a valid number - v1. ...passed
+  Test: test correct returned when string is a valid number - v2. ...passed
+  Test: test correct returned when string is a valid number - v3. ...passed
+  Test: test correct returned when string is a valid number - v4. ...passed
+  Test: test correct returned when string is a valid number - v5. ...passed
+Suite: 39 - mock_check_if_division_by_zero (turtle_interp.h)
+  Test: that function returns True when zero is input. ...passed
+  Test: that function returns True when zero is input. ...passed
+Suite: 40 - mock_calculation (turtle_interp.c)
+  Test: that function flags when string passed to function is not an operation. ...passed
+  Test: that function flags when trying to divide by zero. ...passed
+  Test: that function return correct value for addition. ...passed
+  Test: that function return correct value for subtraction. ...passed
+  Test: that function return correct value for multiplication. ...passed
+  Test: that function return correct value for division. ...passed
+Suite: 41 - update_stack (turtle_interp.c)
+  Test: test function correctly performs calculation and pushes result onto the stack - addition. ...passed
+  Test: test function correctly performs calculation and pushes result onto the stack - subtraction. ...passed
+  Test: test function correctly performs calculation and pushes result onto the stack - mult. ...passed
+  Test: test function correctly performs calculation and pushes result onto the stack - division. ...passed
+  Test: test function correctly  pushes a valid number onto the stack - v1. ...passed
+  Test: test function correctly  pushes a valid number onto the stack - v2. ...passed
+  Test: test function correctly  pushes a valid number onto the stack - v3. ...passed
+  Test: test function correctly  pushes a valid number onto the stack - v4. ...passed
+  Test: test function correctly  pushes a valid number onto the stack - v5. ...passed
+Suite: 42 - degrees_to_radians (turtle_interp_setup.c)
+  Test: test function correctly converts degrees to radians - direction: North. ...passed
+  Test: test function correctly converts degrees to radians - direction: South. ...passed
+  Test: test function correctly converts degrees to radians - direction: East. ...passed
+  Test: test function correctly converts degrees to radians - direction: West. ...passed
+  Test: test function correctly converts degrees to radians - direction: random inputnumber. ...passed
+Suite: 43 - mock_calculate_turn_amount (turtle_interp.c)
+  Test: test function correctly flags when current move is not a turn. ...passed
+  Test: test function correctly calculates angle to turn for left turn. ...passed
+  Test: test function correctly calculates angle to turn for left turn. ...passed
+Suite: 44 - calculate_next_position (turtle_interp.c)
+  Test: test function correctly calculates next position and updates previous position. ...passed
+Suite: 45 - mock_still_on_screen (turtle_interp.c)
+  Test: test function correctly flags when turtle goes off the right of the screen. ...passed
+  Test: test function correctly flags when turtle goes off the left of the screen. ...passed
+  Test: test function correctly flags when turtle goes off the bottom of the screen. ...passed
+  Test: test function correctly flags when turtle goes off the top of the screen. ...passed
+  Test: test function correctly identifies when turtle on screen for all correct positions. ...passed
+Suite: 46 - mock_set_up_and_make_move (turtle_interp.c)
+  Test: test function correctly makes a left turn - v1. ...passed
+  Test: test function correctly makes a left turn - v2. ...passed
+  Test: test function correctly makes a left turn - v3. ...passed
+  Test: test function correctly makes a right turn - v1. ...passed
+  Test: test function correctly makes a right turn - v2. ...passed
+  Test: test function correctly makes a right turn - v3. ...passed
+  Test: test function correctly flags when forward moves leaves right of the screen. ...passed
+  Test: test function correctly flags when forward moves leaves left of the screen. ...passed
+  Test: test function correctly flags when forward moves leaves bottom of the screen. ...passed
+  Test: test function correctly flags when forward moves leaves top of the screen. ...passed
+  Test: test function correctly makes a forward move when position on screen. ...passed
+Suite: 47 - polish(turtle_interp.c)
+  Test: that function behaves the correctly when only using numbers - v1. ...passed
+  Test: that function behaves the correctly when only using numbers - v2. ...passed
+  Test: that function behaves the correctly when only using numbers - v3. ...passed
+  Test: that function behaves the correctly when only using set variables - v1. ...passed
+  Test: that function behaves the correctly when only using set variables - v2. ...passed
+  Test: that function behaves the correctly when only using set variables - v3. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v1. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v2. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v3. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v4. ...passed
+Suite: 48 - mock_set_up_stack_and_calculate_expression (turtle_interp.c)
+  Test: that function behaves the correctly when only using numbers - v1. ...passed
+  Test: that function behaves the correctly when only using numbers - v2. ...passed
+  Test: that function behaves the correctly when only using numbers - v3. ...passed
+  Test: that function behaves the correctly when only using set variables - v1. ...passed
+  Test: that function behaves the correctly when only using set variables - v2. ...passed
+  Test: that function behaves the correctly when only using set variables - v3. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v1. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v2. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v3. ...passed
+  Test: that function behaves the correctly when using mix of numbers and set variables - v4. ...passed
+Suite: 49 - mock_set(turtle_interp.c)
+  Test: that function gives parsing error when no starting character (ie, "SET"). ...passed
+  Test: that function gives parsing error when no variable character (ie, var in [A-Z]). ...passed
+  Test: that function gives parsing error when no defining character (ie, ":="). ...passed
+  Test: that function gives parsing error when there are too many operations - v1. ...passed
+  Test: that function gives parsing error when there are too many operations - v2. ...passed
+  Test: test recursive behaviour and that variable is set for correct grammar (1). ...passed
+  Test: test recursive behaviour and that variable is set for correct grammar (2). ...passed
+  Test: test recursive behaviour and that variable is set for correct grammar (3). ...passed
+  Test: test recursive behaviour and that variable is set for correct grammar (4). ...passed
+  Test: test recursive behaviour and that variable is set for correct grammar (5). ...passed
+Suite: 50 - mock_check_if_integer(turtle_interp.c)
+  Test: that function correctly returns False when decimal part of number >= FLOAT_DIF - v1. ...passed
+  Test: that function correctly returns False when decimal part of number >= FLOAT_DIF - v2. ...passed
+  Test: that function correctly returns False when decimal part of number >= FLOAT_DIF - v3. ...passed
+  Test: that function correctly returns False when decimal part of number >= FLOAT_DIF - v4. ...passed
+  Test: that function correctly returns False when decimal part of number >= FLOAT_DIF - v5. ...passed
+  Test: that function correctly returns False when decimal part of number >= FLOAT_DIF - v5. ...passed
+  Test: that function correctly returns True when decimal part of number < FLOAT_DIF - v1. ...passed
+  Test: that function correctly returns True when decimal part of number < FLOAT_DIF - v2. ...passed
+  Test: that function correctly returns True when decimal part of number < FLOAT_DIF - v3. ...passed
+  Test: that function correctly returns True when decimal part of number < FLOAT_DIF - v4. ...passed
+  Test: that function correctly returns True when decimal part of number < FLOAT_DIF - v5. ...passed
+Suite: 51 - mock_check_do_var_and_return_place (turtle_interp.c)
+  Test: that function correctly flags when string is not a variable - v1. ...passed
+  Test: that function correctly flags when string is not a variable - v2. ...passed
+  Test: that function correctly flags when string is not a variable - v3. ...passed
+  Test: that function correctly flags when string is not a variable - v4. ...passed
+  Test: that function correctly flags when string is not a variable - v5. ...passed
+  Test: that function correctly flags when string is a possible var. - v1. ...passed
+  Test: that function correctly flags when string is a possible var. - v1. ...passed
+  Test: that function correctly flags when string is a possible var. - v2. ...passed
+  Test: that function correctly flags when string is a possible var. - v3. ...passed
+  Test: that function correctly flags when string is a possible var. - v4. ...passed
+  Test: that function correctly flags when string is a possible var. - v5. ...passed
+Suite: 52 - mock_check_do_var_or_num_valid (turtle_interp.c)
+  Test: that function correctly returns False when not a var. or num. - v1. ...passed
+  Test: that function correctly returns False when not a var. or num. - v2. ...passed
+  Test: that function correctly returns False when not a var. or num. - v3. ...passed
+  Test: that function correctly returns False when not a var. or num. - v4. ...passed
+  Test: that function correctly returns False when not a var. or num. - v5. ...passed
+  Test: that function correctly flags when string is an immediate integer - v1. ...passed
+  Test: that function correctly flags when string is an immediate integer - v2. ...passed
+  Test: that function correctly flags when string is an immediate integer - v3. ...passed
+  Test: that function correctly flags when string is an immediate integer - v4. ...passed
+  Test: that function correctly flags when string is an immediate integer - v5. ...passed
+  Test: that function correctly flags when string is not immediate integer - v1. ...passed
+  Test: that function correctly flags when string is not immediate integer - v2. ...passed
+  Test: that function correctly flags when string is not immediate integer - v3. ...passed
+  Test: that function correctly flags when string is not immediate integer - v4. ...passed
+  Test: that function correctly flags when string is not immediate integer - v5. ...passed
+  Test: that function correctly flags when string var. and set to integer - v1. ...passed
+  Test: that function correctly flags when string var. and set to integer - v2. ...passed
+  Test: that function correctly flags when string var. and set to integer - v3. ...passed
+  Test: that function correctly flags when string var. and set to not int. - v1. ...passed
+  Test: that function correctly flags when string var. and set to not int. - v2. ...passed
+  Test: that function correctly flags when string var. and set to not int. - v3. ...passed
+Suite: 53 - mock_check_and_set_do_var_or_num (turtle_interp.c)
+  Test: that function correctly returns False when not a var. or num. - v1. ...passed
+  Test: that function correctly returns False when not a var. or num. - v2. ...passed
+  Test: that function correctly returns False when not a var. or num. - v3. ...passed
+  Test: that function correctly returns False when not a var. or num. - v4. ...passed
+  Test: that function correctly returns False when not a var. or num. - v5. ...passed
+  Test: that function returns the correct value when string is an immediate integer - v1. ...passed
+  Test: that function returns the correct value when string is an immediate integer - v2. ...passed
+  Test: that function returns the correct value when string is an immediate integer - v3. ...passed
+  Test: that function returns the correct value when string is an immediate integer - v4. ...passed
+  Test: that function returns the correct value when string is an immediate integer - v5. ...passed
+  Test: that function returns the correct value when string is a defined variable - v1. ...passed
+  Test: that function returns the correct value when string is a defined variable - v2. ...passed
+  Test: that function returns the correct value when string is a defined variable - v3. ...passed
+Suite: 54 - mock_check_to_is_larger_than_from (turtle_interp.c)
+  Test: that function correctly returns False DO FROM is > than DO TO. ...passed
+  Test: that function correctly returns True DO FROM is <= than DO TO. ...passed
+Suite: 55 - mock_do_loop_from (turtle_interp.c)
+  Test: that function loops correct amount of times and that p->place have the correctvalue on exit of function - v1. ...passed
+  Test: that function loops correct amount of times and that p->place have the correctvalue on exit of function - v2. ...passed
+  Test: that function loops correct amount of times and that p->place have the correctvalue on exit of function - v3. ...passed
+  Test: that function loops correct amount of times and that p->place have the correctvalue on exit of function - v4. ...passed
+  Test: that function loops correct amount of times and that p->place have the correctvalue on exit of function - v5. ...passed
+Suite: 56 - mock_do_to_from (turtle_interp.c)
+  Test: that function correctly flags invalid arrangement of strings - no "DO". ...passed
+  Test: that function correctly flags invalid arrangement of strings - no variable as subject of DO function. ...passed
+  Test: that function correctly flags invalid arrangement of strings - no "FROM". ...passed
+  Test: that function correctly flags invalid arrangement of strings - no var. or num in after "FROM". ...passed
+  Test: that function correctly flags invalid arrangement of strings - no "TO". ...passed
+  Test: that function correctly flags invalid arrangement of strings - no var. or num in after "TO" - v1. ...passed
+  Test: that function correctly flags invalid arrangement of strings - no var. or num in after "TO" - v2. ...passed
+  Test: that function correctly flags invalid arrangement of strings when the FROM > the TO. ...passed
+  Test: that function correctly flags when DO does not end correctly, ie, there is no "{". ...passed
+  Test: that behaves correctly FROM immediate number TO immediate number. ...passed
+  Test: that behaves correctly FROM a defined variable TO immediate number. ...passed
+  Test: that behaves correctly FROM immediate number TO a defined variable. ...passed
+  Test: that behaves correctly FROM a defined variable TO a defined variable. ...passed
+Suite: 57 - mock_instruction (turtle_interp.c)
+  Test: that function correctly flags when no valid instruction is input 1 ...passed
+  Test: that function correctly flags when no valid instruction is input 2 ...passed
+  Test: that function correctly flags when no valid instruction is input 3 ...passed
+  Test: that behaves correctly for valid instruction (FD) ...passed
+  Test: that behaves correctly for valid instruction (LT) ...passed
+  Test: that behaves correctly for valid instruction (RT) ...passed
+  Test: that behaves correctly for valid instruction (DO) ...passed
+  Test: that behaves correctly for valid instruction (SET) ...passed
+Suite: 58 - mock_instruction_list (turtle_interp.c)
+  Test: that function correctly flags invalid arrangement of strings (1) ...passed
+  Test: that function correctly flags invalid arrangement of strings (2) ...passed
+  Test: that function correctly flags invalid arrangement of strings (3) ...passed
+  Test: that function correctly flags an empty file ...passed
+  Test: that behaves correctly for valid set of strings (1) ...passed
+  Test: that behaves correctly for valid set of strings (2) ...passed
+  Test: that behaves correctly for valid set of strings (3) ...passed
+Suite: 59 - mock_interpreter_program_main (turtle_interp.c)
+  Test: that function flags incorrect start symbol (ie, "{") (1). ...passed
+  Test: that function flags incorrect start symbol (ie, "{") (2). ...passed
+  Test: that function flags incorrect start symbol (ie, "{") (3). ...passed
+  Test: that function flags when the input file is empty. ...passed
+  Test: that function continues correctly when start symbol (ie, "{") is first str. ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites     59     59    n/a      0        0
+               tests    365    365    365      0        0
+             asserts 482278 482278 482278      0      n/a
+
+Elapsed time =    0.757 seconds
+
+
+
+
+Parsing Error: 0 - Test to see if the #define PARSING_ERROR exit function behaves correctly.
+NO ACTUAL ERROR - Print one: 1.
+
+
+
+     CUnit - A Unit testing framework for C - Version 2.1-3
+             http://cunit.sourceforge.net/
+
+
+***************** CUNIT CONSOLE - MAIN MENU ******************************
+(R)un  (S)elect  (L)ist  (A)ctivate  (F)ailures  (O)ptions  (H)elp  (Q)uit
+Enter command: q
+==5375== 
+==5375== HEAP SUMMARY:
+==5375==     in use at exit: 0 bytes in 0 blocks
+==5375==   total heap usage: 5,035 allocs, 5,035 frees, 2,084,879 bytes allocated
+==5375== 
+==5375== All heap blocks were freed -- no leaks are possible
+==5375== 
+==5375== For counts of detected and suppressed errors, rerun with: -v
+==5375== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+

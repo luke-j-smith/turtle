@@ -1,0 +1,8 @@
+{
+  SET A := 5 ; 
+  SET B := 3 A * ; 
+  SET Z := B A B A * + + ; 
+  FD Z
+  RT 90
+  FD -100 
+}

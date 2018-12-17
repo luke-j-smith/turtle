@@ -1,0 +1,9 @@
+{
+  SET A := 100 ; 
+  SET B := 100 5 / 3 * ; 
+  DO J FROM -10 TO 10 {
+    FD B 
+    LT A
+    RT J
+  }
+}
