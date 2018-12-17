@@ -1,0 +1,15 @@
+FUNC_DEF repeat ( ) 
+{
+  FD 30
+  LT 45
+}
+
+
+MAIN {
+  DO A FROM 0 TO 7 {
+    FUNC repeat ( ) ; 
+  }
+}
+
+
+

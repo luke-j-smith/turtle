@@ -1,0 +1,30 @@
+FUNC_DEF func1 ( var1 )
+{
+  FD var1
+  RT 30
+  FUNC two ( var1 B C ) ; 
+}
+
+FUNC_DEF two ( var1 var2 var3 )
+{
+  DO var2 FROM 1 TO 8 {
+    FUNC three ( var1 var2 ) ;  
+  } 
+}
+
+FUNC_DEF three ( look me )
+{
+  SET me := look 5 / ;
+  FD me
+  RT 45
+ }
+}
+
+MAIN {
+  DO A FROM 1 TO 50 {
+  FUNC func1 ( A ) ; 
+  }
+}
+
+
+

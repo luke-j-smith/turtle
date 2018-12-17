@@ -1,0 +1,13 @@
+FUNC_DEF set1 ( var ) 
+{
+  SET C := A 1.5 * ; 
+}
+
+
+MAIN {
+  DO A FROM 1 TO 100 {
+    FUNC set1 ( A ) ;     
+    FD C
+    RT 62
+  }
+}
