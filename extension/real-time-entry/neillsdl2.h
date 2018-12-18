@@ -1,3 +1,8 @@
+/**
+ * Written by Neill Campbell
+ * (http://www.bristol.ac.uk/engineering/people/neill-w-campbell/index.html)
+ * to facilitate the use of SDL2.
+ */
 #include <SDL2/SDL.h>
 #include <math.h>
 
