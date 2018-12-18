@@ -1,5 +1,5 @@
 # Turtle Graphics
-Turtle Graphics was the fourth and final assignment (completed in January 2016) of my Programing in C course. The assignment involved writing a parser and interpreter for the Turtle language. The Turtle language was inspired by a subset of *LOGO* (https://en.wikipedia.org/wiki/Logo_(programming_language)) and was intended to be a simple programming language that allowed young children to learn a computer language by driving a 'turtle' around the screen.
+Turtle Graphics was the fourth and final assignment (completed in January 2017) of my Programing in C course. The assignment involved writing a parser and interpreter for the Turtle language. The Turtle language was inspired by a subset of *LOGO* (https://en.wikipedia.org/wiki/Logo_(programming_language)) and was intended to be a simple programming language that allowed young children to learn a computer language by driving a 'turtle' around the screen.
 
 ### Turtle's Grammar
 ```
