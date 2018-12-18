@@ -1,5 +1,5 @@
 # Parser
-The parser takes a text file as its input and determines whether that file contains a valid Turtle program, as defined by the grammar below. If the file contain a valid program then there is no output. If the file contains an invalid program then a description of the issue is displayed.
+The parser takes a text file as its input and determines whether that file contains a valid Turtle program, as defined by the grammar below. If the file contains a valid program then there is no output. If the file contains an invalid program then a description of the issue is displayed.
 
 #### Turtle Grammar
 ```
@@ -29,12 +29,12 @@ The parser takes a text file as its input and determines whether that file conta
 ```
 
 ## Usage
-The parser can be complied using the *makefile*:
+The parser can be compiled using the *makefile*:
 ```
 make
 ```
 
-The parser can then be run using the *makefile* and by specifying the input file:
+The parser can then be run using the *makefile*, with the input file specified:
 ```
 make run TURTLE="input_file_name.txt"
 ```

@@ -2,11 +2,11 @@
 Part of the assignment was to convince the marker that every line of code had been tested. In order to do this I wrote the report below to detail my experience using TDD, CUnit and Valgrind. This report has not been edited since handing in my assignment in January 2016.
 
 #### Usage
-In order to test the parser and interpreter, we can run:
+In order to test the parser and interpreter, we can use:
 ```
 make
 ```
-to compile the files we need and then run them using:
+and then:
 ```
 make run
 ```

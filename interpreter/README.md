@@ -1,5 +1,5 @@
 # Interpreter
-The interpreter takes a Turtle program specified in a text file as its input and draws the program (i.e., the 'turtle' moving around) to the screen. The interpreter will continue to draw the 'turtle' until it reaches the end of the program or an error in the program, at which point it will exit and display a message detailing the error. The program can be stopped at any point by clicking on the terminal.
+The interpreter takes a Turtle program, specified in a text file, as its input and draws the program (i.e., the 'turtle' moving around) to the screen. The interpreter will continue to draw the 'turtle' until it reaches either the end of the program or an error, at which point it will exit and display a message detailing the error. The program can be stopped at any point by clicking on the terminal.
 
 ## neillsdl2
 There are two files ```neillsdl2.c``` and ```neillsdl2.h``` that I have not written. These were written by Neill Campbell (http://www.bristol.ac.uk/engineering/people/neill-w-campbell/index.html) to facilitate the use of SDL2 in the assignment (as the direct use of this library was not being assessed).
@@ -32,12 +32,12 @@ There are two files ```neillsdl2.c``` and ```neillsdl2.h``` that I have not writ
 ```
 
 ## Usage
-The parser can be complied using the *makefile*:
+The parser can be compiled using the *makefile*:
 ```
 make
 ```
 
-The interpreter can then be run using the *makefile* and by specifying the input file:
+The interpreter can then be run using the *makefile*, with the input file specified:
 ```
 make run TURTLE="input_file_name.txt"
 ```

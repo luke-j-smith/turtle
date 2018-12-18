@@ -1,5 +1,5 @@
 # Extension Part Two - Real-Time Entry
-The second part of the extension has altered the Turtle interpreter so that it does not read in a program from a file, instead, the user can type in their program from the command line in real-time, with the option of saving the program to a file before exiting.
+The second part of the extension has altered the Turtle interpreter so that it does not read in a program from a file, but instead, the user can type in their program from the command line in real-time.
 
 The SDL display updates as instructions are typed and all of the same features of the original grammar are present (including ```DO``` loops, etc). If the user makes a syntax or semantic error then we exit the program immediately. 
 
@@ -39,7 +39,7 @@ The slightly expanded grammar is detailed below:
 <FILE_NAME>     ::= string
 ```
 ## Usage
-The real-time interpreter can be complied using the *makefile*:
+The real-time interpreter can be compiled using the *makefile*:
 ```
 make
 ```

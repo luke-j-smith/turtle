@@ -64,12 +64,12 @@ The formal grammar has been expanded and is detailed below:
 ```
 
 ## Usage
-The parser can be complied using the *makefile*:
+The extension can be compiled using the *makefile*:
 ```
 make
 ```
 
-The parser can then be run using the *makefile* and by specifying the input file:
+The extension can then be run using the *makefile*, with the input file specified:
 ```
 make run TURTLE="input_file_name.txt"
 ```
